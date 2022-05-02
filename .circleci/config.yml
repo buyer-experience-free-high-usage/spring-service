@@ -10,14 +10,14 @@ jobs:
       - run: ./mvnw package
       - run: sleep 600
 
-workflows:
-  scheduled:
-    triggers:
-      - schedule:
-          cron: "* * 1,2,3 * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - build
+# workflows:
+#  scheduled:
+#    triggers:
+#      - schedule:
+#          cron: "* * 1,2,3 * *"
+#          filters:
+#            branches:
+#              only:
+#                - master
+#    jobs:
+#      - build
